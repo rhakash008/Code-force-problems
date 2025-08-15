@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
+
+void solve() {
+   string guest, host, pile;
+    
+   
+    getline(cin, guest);
+    getline(cin, host);
+    getline(cin, pile);
+    
+    
+    string combined = guest + host;
+    
+    
+    sort(combined.begin(), combined.end());
+    sort(pile.begin(), pile.end());
+    
+    
+    if (combined == pile) {
+        cout << "YES" << endl;
+    } else {
+        cout << "NO" << endl;
+    }
+}
+
+int main() {
+    fast_io
+    solve();
+    return 0;
+}
