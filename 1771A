@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define q int
+#define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
+
+void solve() {
+    q n;                  
+    cin >> n;
+    vector<int> a(n);
+    int mn = INT_MAX, mx = 0;
+
+    for(q i = 0; i < n; i++){
+        cin >> a[i];
+        mn = min(mn, a[i]);
+        mx = max(mx, a[i]);
+    }
+
+    int mnCnt = 0, mxCnt = 0;
+    for(q i = 0; i < n; i++){
+        if(a[i] == mn) mnCnt++;
+        if(a[i] == mx) mxCnt++;
+    }
+
+    ll ans;
+    if(mn == mx){
+        ans = 1ll * mnCnt * (mnCnt - 1);
+    } else {
+        ans = 1ll * mnCnt * mxCnt * 2;
+    }
+
+    cout << ans << "\n";
+}
+
+int main() {
+    fast_io
+    q t;
+    cin >> t;
+    while(t--) 
+    solve();
+
+    return 0;
+}
