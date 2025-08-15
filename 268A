@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+#define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
+#define all(x) (x).begin(), (x).end()
+#define pb push_back
+#define ff first
+#define ss second
+typedef long long ll;
+typedef pair<int,int> pii;
+typedef pair<ll,ll> pll;
+ 
+// Solve function
+void solve()
+{
+    int a,count=0;
+    cin>>a;
+    int x[a],y[a];
+    
+    for(int i=0;i<a;i++)
+    {
+        cin>>x[i]>>y[i];
+    }
+    for(int i = 0; i < a; i++){
+        for(int j = 0; j<a;j++){
+            if(x[i]==y[j]){
+                count++;
+            }
+        }
+    }
+    cout<<count<<endl;
+}
+ 
+int main() {
+    fast_io
+    solve(); 
+    return 0;
+}
