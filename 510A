@@ -1,0 +1,50 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+#define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
+#define all(x) (x).begin(), (x).end()
+#define pb push_back
+#define ff first
+#define ss second
+typedef long long ll;
+typedef pair<int,int> pii;
+typedef pair<ll,ll> pll;
+ 
+// Solve function
+void solve()
+{
+   int n, m;
+    cin >> n >> m;
+ 
+ 
+    bool right = true;
+ 
+    for(int i = 1; i <= n; i++) {
+        if(i % 2 != 0) {
+            
+            for(int j = 1; j <= m; j++)
+                cout << '#';
+        } else {
+            
+            if(right) {
+                
+                for(int j = 1; j < m; j++)
+                    cout << '.';
+                cout << '#';
+            } else {
+                
+                cout << '#';
+                for(int j = 2; j <= m; j++)
+                    cout << '.';
+            }
+            right = !right; 
+        }
+        cout << endl; 
+    }
+}
+ 
+int main() {
+    fast_io
+    solve(); 
+    return 0;
+}
