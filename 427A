@@ -1,0 +1,31 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+#define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
+
+void solve()
+{
+    int n;
+    cin>>n;
+    int police=0,crime=0;
+    while(n--)
+    {
+        int x;
+        cin>>x;
+        if(x>0) police += x;
+        else {
+            if(police > 0) police--;
+            else crime++;
+        }    
+    }
+
+    cout<<crime;
+}
+
+int main()
+{
+    fast_io
+    solve();
+
+    return 0;
+}
