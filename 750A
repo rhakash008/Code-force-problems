@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long int
+#define q int
+#define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
+
+void solve() 
+{
+    int n ,k,count=0;
+    cin>> n >> k;
+    int a,b,c=0;
+    a= 4*60;
+    b=a-k;
+
+    for(int i = 1; i <= n; i++){
+         c=c+(5*i);
+        if(b >= c){
+            count++;
+        }
+        else{
+            break;
+        }
+        
+    }
+    cout<<count;
+}
+
+int main() {
+    fast_io
+    solve();
+    return 0;
+}
