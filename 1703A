@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
+
+void solve() {
+    int n;
+    string a;
+    cin>>n;
+    for(int i = 0; i < n; i++){
+        cin>>a;
+
+    for(char &c :a) c= tolower(c);  //make the string all lower case , for(char &c : a) c= toupper(c) for make all upper case
+    if(a =="yes") cout<<"YES"<<endl;
+    else cout<<"NO"<<endl;
+    }
+}
+
+int main() {
+    fast_io
+    solve();
+    return 0;
+}
