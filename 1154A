@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ii int
+#define ll long long int
+#define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
+
+void solve() {
+    vector<int>n(4);
+    for(int i=0;i<4;i++) cin>>n[i];
+
+    sort(n.begin(),n.end());
+
+    ii a= n[3]-n[1];
+    ii b= n[3]-n[2];
+    ii c= n[3]-n[0];
+     
+cout<<a<<" "<<b<<" "<<c;
+    
+    
+}
+
+int main() {
+    fast_io
+    solve();
+    return 0;
+}
