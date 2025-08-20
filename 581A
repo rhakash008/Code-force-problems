@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ii int
+#define ll long long int
+#define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
+
+void solve() {
+    ii r,b;
+    cin>>r>>b;
+    int small=min({r,b});
+    cout<<small<<" ";
+    int big=max({r,b});
+    int d=big-small;
+    int day=d/2;
+    cout<<day;
+}
+
+int main() {
+    fast_io
+    solve();
+    return 0;
+}
