@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
+
+void solve() {
+    int k , r,count=0;
+    cin>>k>>r;
+    
+    for(int i = 1; ;i++){
+        int l=(i*k)%10;
+        if(l== 0 || l == r) {
+            cout<<i;
+            break;
+        }
+       
+    }
+    
+}
+
+int main() {
+    fast_io
+    solve();
+    return 0;
+}
