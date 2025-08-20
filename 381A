@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ii int
+#define ll long long int
+#define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
+
+void solve() {
+    ii n;
+    cin>>n;
+
+    vector<int>t(n);
+    for(int i = 0; i < n; i++) {
+        cin>>t[i];
+    }
+
+    int l=0,r=n-1;
+    int s=0,d=0,k;
+    bool turn = true;
+    while(l<=r){
+            if(t[l]>t[r]){
+                k=t[l];
+                l++;
+            }
+            else{
+                k=t[r];
+                r--;
+            }
+            if (turn) s += k; 
+            else d += k;    
+            turn = !turn;   
+        }
+    cout<<s<<" "<<d;
+}
+
+int main() {
+    fast_io
+    solve();
+    return 0;
+}
