@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ii int
+#define ll long long int
+#define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
+
+void solve() {
+    ii n;
+    cin>>n;
+    ii a,b;
+    for(ii i=0; i<n; i++){
+        cin>>a>>b;
+
+        if(a==b) {
+            cout<<"0"<<endl; 
+            continue; 
+        }
+        int d = abs(a-b);
+        int e = d/10;
+        if(d%10!= 0) e++;
+
+        cout<<e<<endl;
+    }   
+}
+
+int main() {
+    fast_io
+    solve();
+    return 0;
+}
