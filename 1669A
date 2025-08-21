@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ii int
+#define ll long long int
+#define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
+
+void solve() {
+//For Division 1: 1900≤rating
+//For Division 2: 1600≤rating≤1899
+//For Division 3: 1400≤rating≤1599
+//For Division 4: rating≤1399
+    int n;
+    cin>>n;
+    for(ii i = 0;i <n;i++){
+        ii a;
+        cin>>a;
+
+        if(1900<=a) cout<<"Division 1"<<endl;
+        else if(1600<= a && a<=1899) cout<<"Division 2"<<endl;
+        else if(1400<= a && a<=1599) cout<<"Division 3"<<endl;
+        else if(a<=1399) cout<<"Division 4"<<endl;
+    }
+}
+
+int main() {
+    fast_io
+    solve();
+    return 0;
+}
