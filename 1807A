@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ii int
+#define ll long long int
+#define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
+
+void solve() {
+    ii n;
+    cin>>n;
+    ii a,b,c;
+    for(ii i=0; i<n; i++){
+        cin>>a>>b>>c;
+
+        if(a+b==c) cout<<"+"<<endl;
+        else if(a-b==c) cout<<"-"<<endl;
+    }    
+}
+
+int main() {
+    fast_io
+    solve();
+    return 0;
+}
