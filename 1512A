@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ii int
+#define ll long long int
+#define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
+
+void solve() 
+{
+    int a; cin>>a;
+    map<int ,int>mp;
+    vector<int> v(a);
+    for(ii i=0; i<a; i++){
+            int x;
+            cin>>x;
+            v[i]=x;
+            mp[x]++;
+
+        }
+
+    for(auto i : mp){
+        if(i.second == 1){
+            for(int j =0;j<(int)v.size();j++){
+                if(v[j]==i.first){
+                    cout<<j+1<<"\n";
+                    return;
+                }
+            }
+        }
+    }
+}
+
+int main() {
+    fast_io
+    ii t; cin>>t;
+    while(t--){
+    solve();}
+    return 0;
+}
