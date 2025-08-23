@@ -1,0 +1,47 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ii int
+#define ll long long int
+#define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
+ 
+void solve() 
+{
+    ii n;
+    cin>>n;
+    char ch;
+    while(n--){
+        int a,b;
+        cin>>a;
+        string d="";
+        for(ii i=0;i<a;i++){
+            cin>>ch;
+            d +=ch;
+        }
+        cin>>b;
+        string v="";
+        for(ii i=0;i<b;i++){
+            cin>>ch;
+            v +=ch; 
+        }
+        string c="";
+        for(ii i=0;i<b;i++){
+            cin>>ch;
+            c +=ch;
+        }
+        for(ii i=0;i<b;i++){
+            if(c[i]=='D'){
+                d =d+ v[i];
+            }
+            else if(c[i]=='V'){
+                d = v[i]+d;
+            }
+        }
+        cout<<d<<endl;
+    }
+}
+ 
+int main() {
+    fast_io
+    solve();
+    return 0;
+}
