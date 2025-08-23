@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ii int
+#define ll long long int
+#define fast_io ios::sync_with_stdio(false); cin.tie(nullptr);
+
+void solve() 
+{
+    int n;
+    cin>>n;
+    for(ii i = 0;i < n; i++) {
+        string a; cin >> a;
+        int c = 0;
+        for(ii j = 0; j < 2; j++) { 
+            c += (a[j] - '0');   //'0' ASCII vaue is 48, if input 77, a[j]= 48+7=55,a[j+1]=55, 55-48=7 + again ,convert char to int
+        }
+        cout << c << endl;
+    }
+}
+
+int main() {
+    fast_io
+    solve();
+    return 0;
+}
